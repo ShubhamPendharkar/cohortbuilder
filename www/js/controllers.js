@@ -2,6 +2,7 @@ angular.module('DiseaseRegistry.controllers', [])
 
   .controller('AppCtrl', function ($scope, $http) {
 
+    var url="http://diseaseregistry-59621.onmodulus.net/api/Cohorts";
     $scope.conditionList = [
       {text: "Condition 1", checked: false},
       {text: "Condition 2", checked: false},
@@ -34,7 +35,7 @@ angular.module('DiseaseRegistry.controllers', [])
 
     $scope.doRefresh = function () {
 
-      $http.get("http://disease-registry-58009.onmodulus.net/api/Cohorts")
+      $http.get(url)
         .success(function (data) {
           $scope.cohorts =data;
           $scope.$broadcast('scroll.refreshComplete');
@@ -60,15 +61,15 @@ angular.module('DiseaseRegistry.controllers', [])
 
       data = {'name': $scope.post_cohort.name, 'id': $scope.post_cohort.id, 'conditions': conditions};
       //console.log(data);
-      $http.post("http://disease-registry-58009.onmodulus.net/api/Cohorts", data).then(afterPOST);
+      $http.post(url, data).then(afterPOST);
     };
 
 
     $scope.deleteCohort = function (cohort) {
-      var url = "http://disease-registry-58009.onmodulus.net/api/Cohorts/" + cohort._id;
+      url+= cohort._id;
       $http.delete(url).then(afterDelete(cohort));
     };
-    $http.get("http://disease-registry-58009.onmodulus.net/api/Cohorts").then(onComplete);
+    $http.get(url).then(onComplete);
 
 
   });
