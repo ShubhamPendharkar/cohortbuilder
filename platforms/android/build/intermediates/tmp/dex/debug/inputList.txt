@@ -1,0 +1,2 @@
+/Users/sainix/Desktop/cohortBuilder/platforms/android/build/intermediates/classes/debug
+/Users/sainix/Desktop/cohortBuilder/platforms/android/build/intermediates/pre-dexed/debug/classes-9c568ef7dc34b1493b9c9ebfe2b413c7c019910a.jar

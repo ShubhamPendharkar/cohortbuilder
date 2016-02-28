@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/sainix/Desktop/cohortBuilder/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1989a9d5a7af5d6b30b91f2eaf1e9e721c88ff4f">
+        <dex dex="/Users/sainix/Desktop/cohortBuilder/platforms/android/build/intermediates/pre-dexed/debug/classes-9c568ef7dc34b1493b9c9ebfe2b413c7c019910a.jar" />
+    </item>
+
+</items>

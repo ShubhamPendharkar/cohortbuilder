@@ -1,0 +1,28 @@
+<ion-view>
+  <ion-content>
+
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Cohort Id</span>
+        <input type="number" placeholder="Cohort Id" ng-model="post_cohort.id">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Cohort Name</span>
+        <input type="text" placeholder="Cohort Name" ng-model="post_cohort.name">
+      </label>
+    </div>
+
+    <div class="list">
+      <ion-checkbox ng-repeat="condition in conditionList" ng-model="condition.checked" ng-checked="condition.checked">
+        {{ condition.text }}
+      </ion-checkbox>
+    </div>
+  </ion-content>
+
+  <ion-footer-bar align="center">
+    <button class="button button-full button-royal" style="align-self: center" ng-click="createCohort()">Add Cohort
+    </button>
+  </ion-footer-bar>
+
+</ion-view>

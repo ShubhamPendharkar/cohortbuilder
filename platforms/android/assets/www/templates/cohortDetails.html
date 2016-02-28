@@ -1,0 +1,10 @@
+<ion-view view-title="Cohort: {{cohort_name}}">
+  <ion-content>
+    <h3>Name: {{cohort_name}}</h3>
+    <h3>Id: {{cohortId}}</h3>
+    <h3>Conditions:</h3>
+    <ion-list type="card" ng-repeat="cond in conditions">
+      <h4>{{cond.name}}</h4>
+    </ion-list>
+  </ion-content>
+</ion-view>
